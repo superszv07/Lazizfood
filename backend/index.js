@@ -22,9 +22,7 @@ app.use(express.json())//add express json otherwise it will not work
 app.use('/api', require("./Routes/CreateUser"));//to hit createUser end point
 app.use('/api', require("./Routes/DisplayData"));
 app.use('/api', require("./Routes/OrderData"));
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+
 app.use(express.static(path.join(dirname, "/frontend/build")));
 app.get('*',(req,res)=>{res.sendFile(path.resolve(dirname,"frontend" ,"build","index.html" ));})
 app.listen(port, () => {
