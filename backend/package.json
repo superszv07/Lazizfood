@@ -5,8 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "nodemon index.js",
+    "build": "npm install && npm install --prefix mernapp && npm run build -- prefix mernapp",
     "eject": "react-scripts eject"
   },
   "author": "Shahbaz",
