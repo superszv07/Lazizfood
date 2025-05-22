@@ -31,7 +31,8 @@ router.post("/createuser",
             password:secPassword,
             email:req.body.email,
             repassword:secPassword,
-            location:req.body.location
+            location:req.body.location,
+            profilePic:req.body.profilePic//add new
         })
         res.json({success:true});//send response if user is create or not after hit end-point
     }

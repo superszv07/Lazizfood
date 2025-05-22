@@ -1,32 +1,69 @@
-const mongoose = require('mongoose')
+// const mongoose = require('mongoose')
 
-const{Schema} = mongoose;
+// const{Schema} = mongoose;
+
+// const UserSchema = new Schema({
+//     name:{
+//         type:String,
+//         required:true
+//     },
+//     location:{
+//         type:String,
+//         required:true
+//     },
+//     email:{
+//         type:String,
+//         required:true
+//     },
+//     password:{
+//         type:String,
+//         required:true
+//     },
+//     repassword:{
+//         type:String,
+//         required:true
+//     },
+//     date:{
+//         type:Date,
+//         default:Date.now
+//     }
+// });
+
+// module.exports = mongoose.model('user',UserSchema)
+
+
+const mongoose = require('mongoose');
+const { Schema } = mongoose;
 
 const UserSchema = new Schema({
-    name:{
-        type:String,
-        required:true
-    },
-    location:{
-        type:String,
-        required:true
-    },
-    email:{
-        type:String,
-        required:true
-    },
-    password:{
-        type:String,
-        required:true
-    },
-    repassword:{
-        type:String,
-        required:true
-    },
-    date:{
-        type:Date,
-        default:Date.now
-    }
+  name: {
+    type: String,
+    required: true
+  },
+  location: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true
+  },
+  password: {
+    type: String,
+    required: true
+  },
+  repassword: {
+    type: String,
+    required: true
+  },
+  profilePic: {
+    type: String, // You can store URL or base64 string
+    default: 'mernapp/frontend/public/profile.png'   // Optional default placeholder
+  },
+  date: {
+    type: Date,
+    default: Date.now
+  }
 });
 
-module.exports = mongoose.model('user',UserSchema)
+module.exports = mongoose.model('user', UserSchema);
