@@ -13,11 +13,14 @@ import Signup from './screens/Signup.js';
 import { CartProvider } from './components/ContexReducer.js';
 import MyOrder from './screens/MyOrder.js';
 import Profile from './screens/Prof.js';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
   <CartProvider>
    <Router>
       <div>
+         <ToastContainer position="top-center" autoClose={3000} />
         <Routes>
          <Route exact path="/" element={<Home/>}/>
          <Route exact path="/login" element={<Login/>}/>

@@ -95,8 +95,9 @@ export default function Home() {
                       )
                       .map((filterItems) => {
                       return(
-                        <div key={filterItems.id} className="col-12 col-md-6 col-lg-3 ">
+                       <div key={filterItems.id} className="col-12 col-sm-8 col-md-6 col-lg-3 d-flex justify-content-center">
                         <Cards
+                         className="card p-2 shadow-sm hover-shadow-lg transition"
                           // foodName={filterItems.name}
                           foodItem={filterItems}
                           options={filterItems.options[0]}

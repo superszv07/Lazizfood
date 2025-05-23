@@ -32,23 +32,28 @@ export default function Profile() {
 
             <div className='container mt-5 mb-5 p-4 rounded shadow' style={{ backgroundColor: 'blue' }}>
                 {userData ? (
-                    <div className="card p-4 shadow-sm d-flex flex-row align-items-center bg-white text-dark" >
-                        {/* Left Side: User Details */}
-                        <div className="flex-grow-1  p-3 rounded">
-                            <h4 className="mb-3">Profile Details</h4>
-                            <p><strong>Name:</strong> {userData.name}</p>
-                            <p><strong>Email:</strong> {userData.email}</p>
-                            <p><strong>Address:</strong> {userData.location}</p>
-                            <p><strong>Joined On:</strong> {new Date(userData.date).toLocaleDateString()}</p>
-                        </div>
+                    <div>
+                        <h2 className="text-center text-white mb-4">User Profile</h2>
+                        <div className="card p-4 shadow-sm bg-white text-dark">
+                            <div className="row align-items-center">
+                                {/* Profile Image */}
+                                <div className="col-md-4 text-center mb-4 mb-md-0">
+                                    <img
+                                        src={userData.profilePic || '/profile.png'}
+                                        alt="User Profile"
+                                        className="img-fluid rounded-circle"
+                                        style={{ width: '150px', height: '150px', objectFit: 'cover' }}
+                                    />
+                                </div>
 
-                        {/* Right Side: Profile Image */}
-                        <div className="ms-4 ">
-                            <img
-                                src={userData.profilePic || '/profile.png'} // fallback if profilePic is not set
-                                alt="User Profile"
-                                style={{ width: '150px', height: '150px', borderRadius: '50%', objectFit: 'cover' }}
-                            />
+                                {/* User Details */}
+                                <div className="col-md-8">
+                                    <p className='fs-5'><strong>Name:</strong> {userData.name}</p>
+                                    <p className='fs-5'><strong>Email:</strong> {userData.email}</p>
+                                    <p className='fs-5'><strong>Address:</strong> {userData.location}</p>
+                                    <p className='fs-5'><strong>Joined On:</strong> {new Date(userData.date).toLocaleDateString()}</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 ) : (

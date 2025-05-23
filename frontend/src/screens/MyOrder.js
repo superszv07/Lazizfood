@@ -20,7 +20,7 @@ export default function MyOrder() {
             })
         }).then(async (res) => {
             let response = await res.json()
-            await setorderData(response)
+            setorderData(response)
         })
 
 
