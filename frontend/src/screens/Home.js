@@ -74,7 +74,7 @@ export default function Home() {
     foodCat.length > 0
       ? foodCat.map((data, /*index*/) => { // Ensure data.id exists, fallback to index if necessary
           return (
-            <div  className="row mb-3 g-1 mx-3 ">
+            <div  className="row mb-3 g-4 mx-2 ">
               <div key={data.id /*|| index*/} className="fs-3 ">
                 {data.CategoryName}
               </div>
@@ -95,7 +95,7 @@ export default function Home() {
                       )
                       .map((filterItems) => {
                       return(
-                       <div key={filterItems.id} className="col-12 col-sm-8 col-md-6 col-lg-3 d-flex justify-content-center">
+                       <div key={filterItems.id} className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center mb-4">
                         <Cards
                          className="card p-2 shadow-sm hover-shadow-lg transition"
                           // foodName={filterItems.name}

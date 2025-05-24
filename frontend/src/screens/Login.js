@@ -71,7 +71,7 @@ export default function Login() {
 
                   <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                     <button  type="submit"  className="m-3 btn btn-success">Login</button>
-                    <Link to="/createuser" className='m-3 btn btn-danger'>I'm new user</Link>
+                    <Link to="/signup" className='m-3 btn btn-danger'>I'm new user</Link>
                   </div>
         
 

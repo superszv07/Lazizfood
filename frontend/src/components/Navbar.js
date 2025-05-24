@@ -83,7 +83,7 @@ export default function Navbar() {
               <Link className="btn bg-white text-success mx-1" to="/login">
                 Login
               </Link>
-              <Link className="btn bg-white text-success mx-1" to="/createuser">
+              <Link className="btn bg-white text-success mx-1" to="/signup">
                 Signup
               </Link>
             </div>
@@ -109,7 +109,7 @@ export default function Navbar() {
               </div>
 
               {/* ✅ Profile Round Icon */}
-              <Link to="/prof" className="ms-2 me-3">
+              <Link to="/profile" className="ms-2 me-3">
                 <img
                   src={profilePic || "./profile.png"}
                   alt="Pro"
